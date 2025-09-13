@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Personajes de DC</title>
+
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #222;
+      margin: 0;
+    }
+
+    .container {
+      perspective: 250px;
+      width: 300px;
+      height: 150px;
+      position: relative;
+    }
+
+    .tarjeta {
+      width: 130px;
+      height: 190px;
+      background-color: #442222;
+      font-size: 40px;
+      position: absolute;
+      top: 25px;
+      left: 125px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      animation: Carrusel 8s linear infinite;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .tarjeta h3 {
+      color: white;
+      font-size: 14px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-top: 70px;
+      background-color: #ff0000;
+    }
+
+    @keyframes Carrusel {
+      from {
+        transform: rotateY(360deg) translateZ(125px);
+        z-index: 10;
+        opacity: 0.9;
+      }
+      50% {
+        z-index: -10;
+      }
+      to {
+        transform: rotateX(0deg) translateZ(125px) rotateX(0deg);
+        z-index: 10;
+      }
+    }
+
+    /* Tarjetas con imágenes */
+    #spider {
+      background-image: url(img/SpiderMan.png);
+    }
+    #spider:hover {
+      box-shadow: 0px 0px 10px red;
+    }
+
+    #deadpool {
+      background-image: url(img/Ant.png);
+      animation-delay: -1s;
+    }
+    #deadpool:hover {
+      box-shadow: 0px 0px 10px rgb(0, 102, 255);
+    }
+
+    #iron {
+      background-image: url(img/IronMan.png);
+      animation-delay: -2s;
+    }
+    #iron:hover {
+      box-shadow: 0px 0px 10px rgb(0, 102, 255);
+    }
+
+    #venom {
+      background-image: url(img/venom.png);
+      animation-delay: -3s;
+    }
+    #venom:hover {
+      box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    }
+
+    #thor {
+      background-image: url(img/Thor.png);
+      animation-delay: -4s;
+    }
+    #thor:hover {
+      box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    }
+
+    #cap {
+      background-image: url(img/cap.png);
+      animation-delay: -5s;
+    }
+    #cap:hover {
+      box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+
+#black {
+      background-image: url(img/black.png);
+      animation-delay: -6s;
+    }
+    #black:hover {
+      box-shadow: 0px 0px 10px purple;
+
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="tarjeta" id="deadpool"><h3>ANTMAN</h3></div>
+    <div class="tarjeta" id="spider"><h3>SPIDERMAN</h3></div>
+    <div class="tarjeta" id="iron"><h3>IRONMAN</h3></div>
+    <div class="tarjeta" id="venom"><h3>VENOM</h3></div>
+    <div class="tarjeta" id="thor"><h3>THOR</h3></div>
+    <div class="tarjeta" id="cap"><h3>CAPITAN AMERICA</h3></div>
+    <div class="tarjeta" id="black"><h3>BLACK WIDOW</h3></div>
+  </div>
+
+  <!-- JavaScript opcional -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
